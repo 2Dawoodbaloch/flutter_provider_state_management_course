@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_provider_state_management_course/provider/count_provider.dart';
+import 'package:flutter_provider_state_management_course/provider/favorite_app_provider.dart';
 import 'package:flutter_provider_state_management_course/provider/multi_provider_example.dart';
 import 'package:flutter_provider_state_management_course/view/screens/count_example.dart';
 import 'package:flutter_provider_state_management_course/view/screens/example_multi_provider.dart';
+import 'package:flutter_provider_state_management_course/view/screens/favorite_app/favorite_app.dart';
 import 'package:flutter_provider_state_management_course/view/screens/home_screen/home_screen.dart';
 import 'package:provider/provider.dart';
 
@@ -18,6 +20,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(providers: [
       ChangeNotifierProvider(create: (_) => MultiProviderExample()),
       ChangeNotifierProvider(create: (_) => CountProvider()),
+      ChangeNotifierProvider(create: (_) => FavoriteAppProvider())
     ],
     child:MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -25,7 +28,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home:  ExampleMultiProvider(),
+      home:  FavoriteApp(),
     ),
     );
 
