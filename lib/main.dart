@@ -8,6 +8,7 @@ import 'package:flutter_provider_state_management_course/view/screens/example_mu
 import 'package:flutter_provider_state_management_course/view/screens/favorite_app/favorite_app.dart';
 import 'package:flutter_provider_state_management_course/view/screens/home_screen/home_screen.dart';
 import 'package:flutter_provider_state_management_course/view/screens/theme_screen/dark_theme.dart';
+import 'package:flutter_provider_state_management_course/view/screens/value_notifier_listner.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -41,7 +42,7 @@ class MyApp extends StatelessWidget {
           brightness: Brightness.dark,
           iconTheme: IconThemeData(color: Colors.red)
         ),
-        home:  DarkThemeScreen(),
+        home:  ValueNotifierListner(),
       );
     }),
     );
